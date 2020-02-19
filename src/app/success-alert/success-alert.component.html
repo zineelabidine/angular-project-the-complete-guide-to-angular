@@ -1,0 +1,19 @@
+<h2>You are in the Success Alert Component</h2>
+<div class="alert alert-primary" role="alert">
+    This is a the seccess Alert!
+  </div>
+  <button type="button" class="btn btn-success">Success</button>
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Your name" aria-label="Username" aria-describedby="basic-addon1" [(ngModel)]="username">
+    <button type="button" class="btn btn-primary" (click)="onclick()">Show the paragraph</button>
+    {{paragraph}}
+</div>
+<div class="input-group mb-3">
+    <button type="button" class="btn btn-success" (click)="onclick()">DisplayDetails</button>
+   <p *ngIf="display">Secret Password=tuna</p>
+   <div *ngFor='let item of array; let p = index'>
+        <p *ngIf="p < 4 ">{{item}}</p>
+      <p *ngIf="p > 4 || p==4 " [ngStyle]="{'background-color': 'red'}" [ngClass]="{'textColor': true}"> {{item}}</p> 
+</div>
+</div>
+  
